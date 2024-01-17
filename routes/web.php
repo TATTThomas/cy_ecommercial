@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/index', function () {
+    return view('index');
 });
+
+Route::get('/shop',function() {
+    return view('shop');
+});
+
+Route::get('/contact',function() {
+    return view('contact');
+});
+
+Route::resource('item',ItemController::class);
+
