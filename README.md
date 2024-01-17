@@ -1,64 +1,147 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<!-- 底下標籤來源參考寫法可至：https://github.com/Envoy-VC/awesome-badges#github-stats -->
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![](https://img.shields.io/github/stars/hsiangfeng/README-Example-Template.svg)｜![](https://img.shields.io/github/forks/hsiangfeng/README-Example-Template.svg)｜![](https://img.shields.io/github/issues-pr/hsiangfeng/README-Example-Template.svg)｜![](https://img.shields.io/github/issues/hsiangfeng/README-Example-Template.svg)
 
-## About Laravel
+> 由於許多人都不知道如何撰寫 README，所以我就提供一個 README 範本，讓大家可以參考，許多地方你都可以斟酌是否要加入，或是修改成你自己的風格。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**ps. 底下範本不是絕對，你可以依照自己需求斟酌增加或刪除。**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# README Template
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![專案封面圖](https://fakeimg.pl/500/)
 
-## Learning Laravel
+> 此專案是一份 README 的撰寫範本，主要是方便所有人可以快速撰寫 README，讓大家可以更有方向的去寫出 README。
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- [線上觀看連結](https://israynotarray.com/)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 功能
 
-## Laravel Sponsors
+測試帳號密碼 **（請斟酌提供，建議只提供僅能觀看不能操作的帳號密碼）**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+帳號： example@example.com
+密碼： example
+```
 
-### Premium Partners
+- [x] 登入
+- [x] 登出
+- [x] 產品列表
+...
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 畫面
 
-## Contributing
+> 可提供 1~3 張圖片，讓觀看者透過 README 了解整體畫面
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![範例圖片 1](https://fakeimg.pl/500/)
+![範例圖片 2](https://fakeimg.pl/500/)
+![範例圖片 3](https://fakeimg.pl/500/)
 
-## Code of Conduct
+## 安裝
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+> 請務必依據你的專案來調整內容。
 
-## Security Vulnerabilities
+以下將會引導你如何安裝此專案到你的電腦上。
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Node.js 版本建議為：`16.15.0` 以上...
 
-## License
+### 取得專案
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone git@github.com:hsiangfeng/README-Example-Template.git
+```
+
+### 移動到專案內
+
+```bash
+cd README-Example-Template
+```
+
+### 安裝套件
+
+```bash
+npm install
+```
+
+### 環境變數設定
+
+請在終端機輸入 `cp .env.example .env` 來複製 .env.example 檔案，並依據 `.env` 內容調整相關欄位。
+
+### 運行專案
+
+```bash
+npm run serve
+```
+
+### 開啟專案
+
+在瀏覽器網址列輸入以下即可看到畫面
+
+```bash
+http://localhost:8080/
+```
+
+## 環境變數說明
+
+```env
+APIPATH= # API 位置
+COUSTOMPATH= # 自訂變數
+...
+```
+
+## 資料夾說明
+
+- views - 畫面放置處
+- controllers - 控制器放置處
+- modules - 模組放置處
+- assets - 靜態資源放置處
+  - scss - scss 檔案放置處
+  - images - 圖片放置處
+...
+
+## 專案技術
+
+- Node.js v16.15.0
+- Vue v3.2.20
+- Vite v4.0.4
+- Vue Router v4.0.11
+- Axios v0.24.0
+- Bootstrap v5.1.3
+...
+
+## 第三方服務
+
+- Algolia
+- Google Analytics
+...
+
+## CI/CD 說明
+
+此專案有使用 Github Actions，所以發起 PR 時會自動執行以下動作：
+
+- 建立 Node.js 環境
+- 安裝相依套件
+- 編譯程式碼
+- 執行 ESLint 掃描
+- 執行測試
+...
+
+當專案 merge 到 main 時會自動執行以下動作：
+
+- 建立 Node.js 環境
+- 安裝相依套件
+- 編譯程式碼
+- 執行 ESLint 掃描
+- 執行測試
+- 部署到 Github Pages
+...
+
+## 聯絡作者
+
+> ps. 這邊絕對不是業配，而是要適當提供一些方式讓觀看者知道你的聯絡方式，讓他們可以更方便的找到你。
+
+你可以透過以下方式與我聯絡
+
+- [部落格](https://israynotarray.com/)
+- [Facebook](https://www.facebook.com/israynotarray)
+- [Instagram](https://www.instagram.com/isray_notarray/)
+...
