@@ -30,5 +30,13 @@ Route::get('/contact',function() {
     return view('contact');
 });
 
-Route::resource('item',ItemController::class);
+Route::get('/cart',function() {
+    return view('cart');
+});
+
+Route::get('/cart',function() {
+    return view('cart');
+});
+
+
 
