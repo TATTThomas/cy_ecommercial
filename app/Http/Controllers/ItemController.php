@@ -26,6 +26,8 @@ class ItemController extends Controller
     public function create()
     {
         //
+
+        return view('item.create');
     }
 
     /**
@@ -37,6 +39,19 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         //
+        $item = new Item();
+
+        $item->item_id = $request->input('item_id');
+        $item->title = $request->input('title');
+        $item->price = $request->input('price');
+        $item->intro = $request->input('intro');
+        $item->num = $request->input('num');
+        $item->category_id = $request->input('category_id');
+        $item->available = $request->input('available');
+        $item->save();
+
+        return redirect()->route('item.shop');
+
     }
 
     /**

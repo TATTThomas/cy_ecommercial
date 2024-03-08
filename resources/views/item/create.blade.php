@@ -8,6 +8,10 @@
 <form action="{{ route('item.shop') }}" method="POST">
     @csrf
     <div class="form-group">
+        <label for="item_id">商品編號</label>
+        <input type="text" class="form-control" id="item_id" name="item_id" required>
+    </div>
+    <div class="form-group">
         <label for="title">商品名稱</label>
         <input type="text" class="form-control" id="title" name="title" required>
     </div>
@@ -24,8 +28,8 @@
         <input type="number" class="form-control" id="num" name="num" required>
     </div>
     <div class="form-group">
-        <label for="category">商品分類</label>
-        <select class="form-control" id="category" name="category" required>
+        <label for="category_id">商品分類</label>
+        <select class="form-control" id="category_id" name="category_id" required>
             <option value="1">家具</option>
             <option value="2">裝飾品</option>
             <option value="3">廚房用品</option>
@@ -34,8 +38,8 @@
     <div class="form-group">
         <label for="available">商品狀況</label>
         <select class="form-control" id="available" name="available" required>
-            <option value="true">上架</option>
-            <option value="false">下架</option>
+            <option value="1">上架</option>
+            <option value="0">下架</option>
         </select>
     </div>
     <button type="submit" class="btn btn-primary">新增</button>
