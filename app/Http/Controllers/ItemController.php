@@ -15,7 +15,7 @@ class ItemController extends Controller
     public function index()
     {
         //
-        return view('item.shop');
+        return view('item.index',['items' => Item::orderBy('id','asc')->get()]);
     }
 
     /**
@@ -50,7 +50,7 @@ class ItemController extends Controller
         $item->available = $request->input('available');
         $item->save();
 
-        return redirect()->route('item.shop');
+        return redirect()->route('item.show');
 
     }
 
@@ -60,10 +60,12 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Item $item)
     {
         //
+        return view('item.show',['item' => $item]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -71,9 +73,10 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Item $item)
     {
         //
+        return view('item.edit',['item' => $item]);
     }
 
     /**
@@ -83,9 +86,22 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Item $item)
     {
-        //
+        // 
+        $newItem = [
+            'item_id' => $request->input('item_id'),
+            'title' => $request->input('title'),
+            'price' => $request->input('price'),
+            'intro' => $request->input('intro'),
+            'num' => $request->input('num'),
+            'category_id' => $request->input('category_id'),
+            'available' => $request->input('available')
+        ];
+
+        $item->update($newItem);
+
+        return redirect()->route('item.show',['item'=>$item->id]);
     }
 
     /**
@@ -94,8 +110,13 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Item $item)
     {
         //
+        $item->delete();
+
+        $item = Item::orderBy('id','asc')->get();
+
+        return redirect()->route('item.index');
     }
 }

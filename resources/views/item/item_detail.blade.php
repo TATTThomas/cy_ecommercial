@@ -16,10 +16,10 @@
             </div> 
 
             <div class="col-12 col-md-6 col-lg-6 detail-section">
-                <h1>商品名稱</h1>
-                <h2>商品價格</h2>
+                <h1>{{ $item->title }}</h1>
+                <h2>{{ $item->price }}</h2>
                 <div class="item-description">
-                    <p>商品描述</p>
+                    <p>{{ $item->intro }}</p>
                 </div>
                 <button class="add-to-cart">Add To Cart</button>
             </div>

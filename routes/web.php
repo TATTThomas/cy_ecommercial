@@ -35,12 +35,15 @@ Route::get('/cart',function() {
 });
 
 Route::controller(ItemController::class)->group(function() {
-    Route::get('/item','index')->name('item.shop');
-    Route::post('/item','store')->name('item.store');
-    Route::get('/item/create','create')->name('item.create');
-    // Route::get('/item/{item}','show')->name('item.show');
-    // Route::put('/item/{item}','update')->name('item.update');
-    // Route::delete('/item/{item}','destroy')->name('item.destroy');
-    // Route::get('/item/{item}/edit','edit')->name('item.edit');
+    Route::get('/item','index')->name('item.index');// 所有商品列表
+    Route::post('/item','store')->name('item.store');//後台儲存商品
+    Route::get('/item/create','create')->name('item.create'); //後台新增商品
+    Route::get('/item/{item}','show')->name('item.show');// 單一商品顯示
+    Route::put('/item/{item}','update')->name('item.update');//後台更新商品
+    Route::get('/item/{item}/edit','edit')->name('item.edit');//後台編輯商品
+    Route::delete('/item/{item}','destroy')->name('item.destroy');//後台刪除商品
+
 });
+
+// 前端主畫面另起一個controller -> HomeController
 
